@@ -1,0 +1,4 @@
+include:
+  - local: 'backend-API.net/backend-ci.yml'
+  - local: 'backoffice/backoffice-ci.yml'
+  - local: 'frontoffice/frontoffice-ci.yml'

@@ -1,0 +1,27 @@
+default:
+  image: node:latest
+
+.base_rules: &base_rules
+  only:
+    - master
+
+stages:
+  - install
+  - build
+
+install:
+  <<: *base_rules
+  stage: install
+  needs: []
+  script:
+    - npm ci --cache .npm --prefer-offline --progress=false --no-audit
+
+build:
+  <<: *base_rules
+  stage: build
+  needs: ["install"]
+  script:
+    - npm run build
+  cache:
+    paths:
+      - .next/

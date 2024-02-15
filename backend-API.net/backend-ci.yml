@@ -1,0 +1,11 @@
+stages:
+  - build
+
+before_script:
+  - "cd Grupo6_CollectorsHidout"
+  - "dotnet restore"
+
+build:
+  stage: build
+  script:
+    - "dotnet build"

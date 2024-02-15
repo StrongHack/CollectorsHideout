@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grupo6_CollectorsHidout", "Grupo6_CollectorsHidout\Grupo6_CollectorsHidout.csproj", "{9B98F597-8158-419B-A84E-05FC66493570}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Group6_CollectorsHideout.Tests", "Group6_CollectorsHideout.Tests\Group6_CollectorsHideout.Tests.csproj", "{B07EF7A3-F42D-42EF-89D9-0786F7B7F60C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B98F597-8158-419B-A84E-05FC66493570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B98F597-8158-419B-A84E-05FC66493570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B98F597-8158-419B-A84E-05FC66493570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B98F597-8158-419B-A84E-05FC66493570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B07EF7A3-F42D-42EF-89D9-0786F7B7F60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07EF7A3-F42D-42EF-89D9-0786F7B7F60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B07EF7A3-F42D-42EF-89D9-0786F7B7F60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07EF7A3-F42D-42EF-89D9-0786F7B7F60C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D803343F-22D7-4473-BB5C-7BCE343B8CD3}
+	EndGlobalSection
+EndGlobal

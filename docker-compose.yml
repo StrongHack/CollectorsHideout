@@ -1,0 +1,51 @@
+version: "3"
+services:
+  # Backend .NET API container
+  backend-api-app:
+    image: backend-api
+    container_name: backend-api
+    build:
+      context: ./backend-API.net
+      target: build
+    ports:
+      - "9000:8000" # Map host port 9000 to container port 8000
+    networks:
+      - app-network
+
+  # Next.js backoffice app container
+  nextjs-backoffice-app:
+    image: backoffice
+    container_name: backoffice
+    env_file:
+      - ./backoffice/.env
+      - ./backoffice/.env.docker
+    build:
+      context: ./backoffice
+      target: runner
+    ports:
+      - "3800:3000" # Map host port 3800 to container port 3000
+    depends_on:
+      - backend-api-app
+    networks:
+      - app-network
+
+  # Next.js frontoffice app container
+  nextjs-frontoffice-app:
+    image: frontoffice
+    container_name: frontoffice
+    env_file:
+      - ./frontoffice/.env
+      - ./frontoffice/.env.docker
+    build:
+      context: ./frontoffice
+      target: runner
+    ports:
+      - "2800:3000" # Map host port 2800 to container port 3000
+    depends_on:
+      - backend-api-app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
